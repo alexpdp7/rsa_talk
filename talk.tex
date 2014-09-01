@@ -87,13 +87,14 @@
 \begin{frame}
 	\frametitle{How it works}
 	\begin{itemize}
-		\item Two large prime numbers $p$ and $q$ (it's easy to
-		      generate them)
+		\item Two large prime numbers $p$ and $q$ (large primes are
+                      easy to find)
 		\item $n = pq$
 		\item $\varphi(n) = \varphi(p)\varphi(q) = (p-1)(q-1) = n - (p + q -1)$
 		      (Euler's totient)
 		\item $e$ such that $1 < e < \varphi(n)$ and $\gcd(e, \varphi(n)) = 1$
 		\item Find $d$ such that $d \equiv e^{-1} \pmod{\varphi(n)}$
+		      (discrete math, modulo arithmetic)
 		\item Public key: $n$, $e$ Private key $n$, $d$ and everything else
 	\end{itemize}
 \end{frame}
@@ -105,6 +106,8 @@
 		\item $c \equiv m^e \pmod{n}$ encryption
 		\item $m \equiv c^d \pmod{n}$ decryption
 		\item ($m^e)^d \equiv m \pmod{n}$ proved by Euler or Fermat
+		\item Need `optimizations' to calculate large exponents
+		      `quickly'
 	\end{itemize}
 \end{frame}
 
