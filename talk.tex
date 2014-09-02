@@ -32,23 +32,28 @@
 	\begin{itemize}
 		\item We had symmetric key algorithms
 		\begin{itemize}
-			\item Hieroglyphs -- 1900 BC
-			\item Mesopotamia Clay Tablets -- 1500 BC
 			\item Hebrew Atbash cipher -- 600 BC
 			\item Caesar cipher -- 40 BC
 			\item Enigma -- 1920
 			\item DES -- 1975
 		\end{itemize}
+		\item RSA precursors (key exchange)
+		\begin{itemize}
+			\item Merkle's Puzzles -- 1974
+			\item Diffie-Hellman -- 1976
+		\end{itemize}
+		
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{1970}
+	\frametitle{The seventies in computing}
 	\begin{itemize}
 		\item 1970 -- 4-node ARPANET
 		\item 1972 -- Intel 8008 -- first 8-bit Intel
 		\item 1973 -- Ethernet
-		\item 1976 -- Cray I -- 4Mb RAM
+		\item 1976 -- Cray I -- 4Mb RAM, Apple I
+		\item 1978 -- VAX 11/780 -- 4Gb addressable RAM
 	\end{itemize}
 \end{frame}
 
@@ -64,11 +69,10 @@
 			\item Mathematical foundations
 			\item Efficient implementation
 			\item Security
-			\item \ldots
-			\item Self-contained
-			\item Practical
 		\end{itemize}
 \end{frame}
+
+\subsection{Mathematical foundations}
 
 \begin{frame}
 	\frametitle{Mathematical foundations}
@@ -80,6 +84,18 @@
 		      composites are hard to decompose)
 		\item Some optimizations
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{A note about modulus}
+
+	Modulus (mod in math, \% in many programming languages)
+
+	$$ 7 \mod 3 = 1 $$
+	$$ 11 \mod 6 = 5 $$
+
+	$$ 1 \equiv 4 \equiv 7 \pmod{3} $$
+	$$ 5 \equiv 11 \equiv 17 \pmod{6} $$
 \end{frame}
 
 \subsection{How it works}
@@ -110,5 +126,71 @@
 		      `quickly'
 	\end{itemize}
 \end{frame}
+
+\subsection{How can it be used}
+
+\begin{frame}
+	\frametitle{How it can be used}
+
+	\begin{itemize}
+		\item You publish your public key, keep your private key
+		      private (obviously!)
+
+		\item Anyone can encrypt a message with your public key,
+		      only you can decrypt it with your private key
+
+		\item You can send out a message along with the message
+		      encoded with your private key. Anyone can decode the
+		      encoded message with your public key and verify
+		      it's equal to the unencoded message
+	\end{itemize}
+\end{frame}
+
+\section{Impact}
+
+\begin{frame}
+	\frametitle{Impact}
+
+	\begin{itemize}
+		\item Public key encryption is very practical (in the
+		      Internet!)
+		\item Signature didn't even exist
+		\item Symmetric is much faster than asymmetric, though!
+	\end{itemize}
+\end{frame}
+
+\section{The twist!}
+
+\begin{frame}
+	\frametitle{British spies!}
+
+	\begin{itemize}
+		\item 1970 -- James H. Ellis (GHCQ\footnote{Government
+		      Communications Headquarters}, formerly GC \&
+		      CS\footnote{Government Code and Cypher School}, Alan!)
+		      proves that asymmetric encryption is possible
+		\item 1974 -- Clifford Cocks, basically finds out the
+		      operations that work in Ellis' paper and is equivalent
+		      to RSA (3 years before)
+		\item 1976 -- Malcolm Williamson invents Diffie-Helman (a
+		      few months before)
+	\end{itemize}
+
+	RSA is just \ldots intuitive? obvious? Everything fits together!
+\end{frame}
+
+\section{Related papers}
+
+\begin{frame}
+	\frametitle{Related papers}
+
+	\begin{itemize}
+		\item Diffie, W.; Hellman, M. (1976). "New directions in
+		      cryptography". IEEE Transactions on Information Theory 22 
+		      (6): 644–654. doi:10.1109/TIT.1976.1055638
+		\item The History of Non-Secret Encryption JH Ellis 1987
+	\end{itemize}
+\end{frame}
+
 
 \end{document}
