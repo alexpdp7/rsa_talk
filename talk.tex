@@ -83,10 +83,10 @@
 		\item Large prime numbers are easy to find (and large
 		      composites are hard to decompose)
 		\item Some optimizations
-		\item \dots
-		\item Much of this is number theory, which didn't have
-                      practical uses before!
 	\end{itemize}
+
+	Much of this is number theory, which didn't have practical
+        uses before
 \end{frame}
 
 \begin{frame}
@@ -104,7 +104,7 @@
 \subsection{How it works}
 
 \begin{frame}
-	\frametitle{How it works}
+	\frametitle{How it works, some mathematical gibberish}
 	\begin{itemize}
 		\item Two large prime numbers $p$ and $q$ (large primes are
                       easy to find)
@@ -114,7 +114,11 @@
 		\item $e$ such that $1 < e < \varphi(n)$ and $\gcd(e, \varphi(n)) = 1$
 		\item Find $d$ such that $d \equiv e^{-1} \pmod{\varphi(n)}$
 		      (discrete math, modulo arithmetic)
-		\item Public key: $n$, $e$ Private key $n$, $d$ and everything else
+	\end{itemize}
+
+	\begin{itemize}
+		\item Public key: $n$, $e$
+		\item Private key $n$, $d$ and everything else
 	\end{itemize}
 \end{frame}
 
@@ -137,7 +141,7 @@
 
 	\begin{itemize}
 		\item You publish your public key, keep your private key
-		      private (obviously!)
+		      private
 
 		\item Anyone can encrypt a message with your public key,
 		      only you can decrypt it with your private key
@@ -155,10 +159,10 @@
 	\frametitle{Impact}
 
 	\begin{itemize}
-		\item Public key encryption is very practical (in the
-		      Internet!)
+		\item Public key encryption is very practical (Internet
+		      communications, for instance)
 		\item Signature didn't even exist
-		\item Symmetric is much faster than asymmetric, though!
+		\item Symmetric is much faster than asymmetric, though
 		\item Hardy will be pissed:
 	\end{itemize}
 
@@ -169,16 +173,17 @@
 	\end{exampleblock}
 \end{frame}
 
-\section{The twist!}
+\section{The twist}
 
 \begin{frame}
-	\frametitle{British spies!}
+	\frametitle{British spies}
 
 	\begin{itemize}
 		\item 1970 -- James H. Ellis (GHCQ\footnote{Government
 		      Communications Headquarters}, formerly GC \&
-		      CS\footnote{Government Code and Cypher School}, Alan!)
-		      proves that asymmetric encryption is possible
+		      CS\footnote{Government Code and Cypher School}, where
+		      Alan Turing worked) proves that asymmetric encryption is
+		      possible
 		\item 1974 -- Clifford Cocks, basically finds out the
 		      operations that work in Ellis' paper and is equivalent
 		      to RSA (3 years before)
@@ -186,7 +191,7 @@
 		      few months before)
 	\end{itemize}
 
-	RSA is just \ldots intuitive? obvious? Everything fits together!
+	RSA is just \ldots intuitive? obvious? Everything fits together
 \end{frame}
 
 \section{Related papers}
@@ -202,5 +207,15 @@
 	\end{itemize}
 \end{frame}
 
+\section{The end}
+
+\begin{frame}
+	\frametitle{The end}
+
+	\begin{itemize}
+		\item Thank you for enduring this
+		\item Questions?
+	\end{itemize}
+\end{frame}
 
 \end{document}
